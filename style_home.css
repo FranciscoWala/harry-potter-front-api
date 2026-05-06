@@ -1,0 +1,63 @@
+body {
+    background-image: url(./img/background_cenary.png);
+    background-size: cover;
+    min-height: 100vh;
+}
+.faixa_azul {
+    width: 100dvw;
+    height: 327px;
+    background-color: #CAF0FF;
+    margin-top: 53px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 60px;
+}
+.card_item {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+    width: 318px;
+    height: 260px;
+    background-color: #E5EADE;
+    border: 1px solid #F4C430;
+    border-radius: 10px;
+    gap: 10px;
+}
+
+.card_item img {
+    height: 170px;
+    width: 295px;
+}
+
+.card_item .btn {
+    cursor: pointer;
+    align-items: center;
+    justify-content: center;
+    display: flex;
+    border: 1px solid #F4C430;
+    border-radius: 17px;
+    width: 164px;
+    height: 39px;
+    font-size: 20px;
+    color: #E5EADE;
+}
+#btn_grifinoria {
+    background-color: #780107;
+}
+#btn_sonserina {
+    background-color: #0C7A57;
+}
+#btn_corvinal {
+    background-color: #0055A3;
+}
+#btn_lufa_lufa {
+    background-color: #F4C430;
+    border: 1px solid #000;
+    color: #000;
+}
+
+
+
+
