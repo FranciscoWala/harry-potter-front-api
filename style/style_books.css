@@ -1,0 +1,66 @@
+:root {
+    --card-bg: #E5EADE;
+    --card-border: #F4C430; 
+    --shadow: 0 4px 12px rgba(0, 0, 0, 0.05);
+}
+body {
+    background-image: url(/img/background_cenary.png);
+    background-size: contain;
+    min-height: 100vh;
+}
+#container {
+    max-width: 1200px;
+    margin: 40px auto;
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(240px, 1fr));
+    gap: 25px;
+    padding: 0 20px;
+}
+.card {
+    width: 200px;
+    background-color: var(--card-bg);
+    border-radius: 16px;
+    padding: 24px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+    box-shadow: var(--shadow);
+    border: 1px solid var(--card-border);
+}
+
+.card:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 10px 25px rgba(0, 0, 0, 0.1);
+}
+
+.card img {
+    width: 140px;
+    height: 140px;
+    object-fit: contain; /* Melhor para fotos de produtos */
+    margin-bottom: 16px;
+    transition: transform 0.3s ease;
+}
+
+.card:hover img {
+    transform: scale(1.1);
+}
+
+.card h3 {
+    font-size: 1.1rem;
+    margin-bottom: 8px;
+    color: var(--text-main);
+}
+
+.card span {
+    font-size: 0.85rem;
+    color: var(--text-muted);
+    margin-bottom: 12px;
+}
+
+.card h1 {
+    font-size: 1.4rem;
+    color: var(--primary);
+    font-weight: 700;
+}
