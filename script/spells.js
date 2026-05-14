@@ -23,14 +23,14 @@ async function criarCard(dados) {
 }
 
 const getDados = async function(){
-    let cardsContainer = document.getElementById('containerCharacters')
+    let cardsContainer = document.getElementById('containerSpells')
     let url = `https://api.potterdb.com/v1/characters`
     let response = await fetch(url)
     let dadosJson = await response.json()
 
-    const listaPersonagens = dadosJson.data 
+    const listaSpells = dadosJson.data 
 
-    const cardsPrometidos = listaPersonagens.map(personagemJson => criarCard(personagemJson))
+    const cardsPrometidos = listaSpells.map(spellsJson => criarCard(spellsJson))
     
 
     const todosOsCards = await Promise.all(cardsPrometidos)

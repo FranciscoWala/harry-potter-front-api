@@ -8,16 +8,16 @@ body {
     background-size: contain;
     min-height: 100vh;
 }
-#container {
+.container {
     max-width: 1200px;
     margin: 40px auto;
     display: grid;
     grid-template-columns: repeat(auto-fill, minmax(240px, 1fr));
-    gap: 25px;
+    gap: 100px;
     padding: 0 20px;
 }
 .card {
-    width: 200px;
+    width: 300px;
     background-color: var(--card-bg);
     border-radius: 16px;
     padding: 24px;
@@ -36,10 +36,10 @@ body {
 }
 
 .card img {
-    width: 140px;
-    height: 140px;
+    width: 240px;
+    height: 240px;
     object-fit: contain; /* Melhor para fotos de produtos */
-    margin-bottom: 16px;
+    margin-bottom: 20px;
     transition: transform 0.3s ease;
 }
 
