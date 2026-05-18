@@ -1,3 +1,4 @@
+'use strict'
 async function criarCard(dados) {
     const card = document.createElement('div')
     card.className = 'card'
