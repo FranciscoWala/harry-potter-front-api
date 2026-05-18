@@ -4,7 +4,7 @@
     --shadow: 0 4px 12px rgba(0, 0, 0, 0.05);
 }
 body {
-    background-image: url(/img/background_cenary.png);
+    background-image: url(../img/background_cenary.png);
     background-size: contain;
     min-height: 100vh;
 }
