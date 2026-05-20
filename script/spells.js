@@ -8,32 +8,38 @@ async function criarCard(dados) {
     foto.src = dados.attributes.image || 'https://placehold.co/200x200?text=Sem+Foto'
     foto.alt = dados.attributes.name
 
+    console.log(foto)
     const casa = document.createElement('span')
-    casa.textContent = dados.attributes.house
+    casa.textContent = dados.attributes.effect
     console.log(casa)
 
     const name = document.createElement('span')
     name.textContent = dados.attributes.name
 
-    const sangueTipo = document.createElement('span')
-    sangueTipo.textContent = dados.attributes.blood_status
+    const categorySpells = document.createElement('span')
+    categorySpells.textContent = dados.attributes.categorySpells
 
-    card.append(foto, name, sangueTipo, casa)
+    const linkWiki = document.createElement('a')
+    linkWiki.href = dados.attributes.wiki
+    linkWiki.target = '_blank'
+    linkWiki.appendChild(foto)
 
+    card.append(name, categorySpells, casa, linkWiki)
+                                                                                                                                                                                                                             
     return card
 }
 
 const getDados = async function(){
     let cardsContainer = document.getElementById('containerSpells')
-    let url = `https://api.potterdb.com/v1/characters`
+    let url = `https://api.potterdb.com/v1/spells`
     let response = await fetch(url)
     let dadosJson = await response.json()
-
-    const listaSpells = dadosJson.data 
-
+    console.log(dadosJson);
+    
+    const listaSpells = dadosJson.data
+    
     const cardsPrometidos = listaSpells.map(spellsJson => criarCard(spellsJson))
     
-
     const todosOsCards = await Promise.all(cardsPrometidos)
 
     cardsContainer.replaceChildren(...todosOsCards)
